@@ -155,7 +155,17 @@
                 ctrlAddItem();
             }
         });
-     };
+    };
+
+    var updateBudget = function(){
+
+        // callculate the budget 
+
+        // return the budget
+
+        // display the budget on the UI  
+
+    };
 
     var ctrlAddItem =function() {
         var input, newItem;
@@ -172,9 +182,11 @@
         // clear the fields 
         UICtrl.clearFields();
 
-        // callculate the budget 
+        // calculate and update budget 
+        updateBudget();
 
-        // display the budget on the UI  
+
+        
     };
 
     return{
