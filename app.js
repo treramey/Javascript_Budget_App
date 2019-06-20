@@ -118,6 +118,22 @@
 
         },
 
+        clearFields: function (){
+            var fields, fieldsArr;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ',' + DOMstrings.inputValue);
+
+            fieldsArr = Array.prototype.slice.call(fields);
+
+            fieldsArr.forEach(function(current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArr[0].focus();
+
+
+        },
+
         getDOMstrings: function(){
             return DOMstrings;
         }
@@ -152,6 +168,9 @@
 
         // add the item to the UI
         UICtrl.addListItem(newItem, input.type);
+
+        // clear the fields 
+        UICtrl.clearFields();
 
         // callculate the budget 
 
